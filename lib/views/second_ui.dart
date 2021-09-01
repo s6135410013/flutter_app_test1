@@ -33,7 +33,109 @@ class _SecondUIState extends State<SecondUI> {
           ),
         ],
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text(
+                'Udsadawut Tangthai',
+              ),
+              accountEmail: Text(
+                'ID: 6135410013',
+              ),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage(
+                  "assets/images/ThugCat.jpg",
+                ),
+              ),
+              otherAccountsPictures: [
+                Image.asset(
+                  "assets/images/SAU.png",
+                ),
+              ],
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/images/SAUBackground.png",
+                  ),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            ListTile(
+              onTap: () {},
+              title: Text(
+                "Home Page",
+              ),
+              leading: Icon(
+                Icons.home,
+              ),
+            ),
+            ListTile(
+              onTap: () {},
+              title: Text(
+                "ตารางเรียน",
+              ),
+              leading: Icon(
+                Icons.calendar_today,
+              ),
+            ),
+            ListTile(
+              onTap: () {},
+              title: Text(
+                "ตารางสอบ",
+              ),
+              leading: Icon(
+                Icons.star,
+                color: Colors.blueAccent,
+              ),
+              trailing: Text(
+                "69",
+                style: TextStyle(
+                  color: Colors.redAccent,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Divider(
+              color: Colors.grey,
+            ),
+            ListTile(
+              onTap: () {},
+              title: Text(
+                "Menu 4",
+                style: TextStyle(
+                  color: Colors.greenAccent,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              // leading: Icon(
+              //   Icons.star,
+              //   color: Colors.blueAccent,
+              // ),
+              trailing: Icon(
+                Icons.menu,
+                color: Colors.blueAccent,
+              ),
+            ),
+            ListTile(
+              onTap: () {},
+              title: Text(
+                "Exit",
+                style: TextStyle(
+                  color: Colors.black45,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              trailing: Icon(
+                Icons.exit_to_app,
+                color: Colors.redAccent,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
